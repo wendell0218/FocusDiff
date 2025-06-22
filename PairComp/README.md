@@ -44,7 +44,7 @@ git clone https://github.com/wendell0218/FocusDiff.git
 cd PairComp
 pip install -r requirements.txt
 ```
-Then download the model [OpenGVLab/InternVL2_5-26B from Hugging Face](https://huggingface.co/OpenGVLab/InternVL2_5-26B) and change [line 97 of evaluate_images.py](FocusDiff/PairComp/evaluate_images.py#97) to the local path corresponding to InternVL2_5-26B. On this basis, you can calculate the semantic consistency score between the generated image and the text prompt through the following command:
+Then download the model [OpenGVLab/InternVL2_5-26B from Hugging Face](https://huggingface.co/OpenGVLab/InternVL2_5-26B) and change [line 97 of evaluate_images.py](evaluate_images.py#97) to the local path corresponding to InternVL2_5-26B. On this basis, you can calculate the semantic consistency score between the generated image and the text prompt through the following command:
 
 ```bash
 python evaluate_images.py --tgtpath <JSON_PATH> --image_path <IMAGE_FOLDER>
