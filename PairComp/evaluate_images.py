@@ -94,7 +94,7 @@ def load_image(image_file, input_size=448, max_num=12):
     return pixel_values
 
 # If you want to load a model using multiple GPUs, please refer to the `Multiple GPUs` section.
-path = '/mnt/prev_nas/refine_draw_RL/models/models/OpenGVLab/InternVL2_5-26B' #path to InternVL2_5-26B
+path = 'path to OpenGVLab/InternVL2_5-26B' #path to InternVL2_5-26B
 model = InternVLChatModel.from_pretrained(
     path,
     torch_dtype=torch.bfloat16,

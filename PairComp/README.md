@@ -39,16 +39,17 @@ Thus, the generated format should be
 
 ### Evaluation
 
+First you should setup the python environment:
 ```bash
 git clone https://github.com/wendell0218/FocusDiff.git
 cd PairComp
 pip install -r requirements.txt
 ```
+Then download the model [OpenGVLab/InternVL2_5-26B from Hugging Face](https://huggingface.co/OpenGVLab/InternVL2_5-26B) and change [line 97 of evaluate_images.py](FocusDiff/PairComp/evaluate_images.py#97) to the local path corresponding to InternVL2_5-26B. On this basis, you can calculate the semantic consistency score between the generated image and the text prompt through the following command:
 
 ```bash
 python evaluate_images.py --tgtpath <JSON_PATH> --image_path <IMAGE_FOLDER>
 ```
-
 
 This will result in a JSONL file in <JSON_PATH> storing the semantic consistency score for each image. Then you can run
 
@@ -57,3 +58,29 @@ python summary_scores.py --tgtpath <JSON_PATH>
 ```
 
 to get the score across each subtask, and the average PairComp score.
+
+## LeaderBoarder
+
+The following are some evaluation results on PairComp of SOTA text-to-image models. If you want to add your model's results on PairComp, feel free to contact us via email kaihangpan@zju.edu.cn.
+
+| Rank |                          Model                          | Model size | Arithmetic mean | Geometric mean |
+| :--: | :-----------------------------------------------------: | :--------: | :-------------: | :------------: |
+|  🏅️   |   [Janus-FocusDiff-7B](https://arxiv.org/abs/2506.05501)    |     7B       |      85.0       |      83.5      |
+|  🥈   |         [SD3-Medium](https://arxiv.org/abs/2403.03206)         |      2B      |      84.4       |      81.4      |
+|  🥉   |      [Sana-1.5](https://arxiv.org/abs/2501.18427)       |      4.8B      |      83.2       |      80.0      |
+|  4   |       [T2I-R1](https://arxiv.org/abs/2505.00703)        |      7B      |      82.4       |      79.3      |
+|  5   |    [Janus-Pro-R1](https://arxiv.org/abs/2506.01480)     |      7B      |      82.0       |      79.2      |
+|  6   | [FLUX.1-dev](https://github.com/black-forest-labs/flux) |      12B      |      80.3       |      75.7      |
+|  7   |       [BLIP3-o](https://arxiv.org/abs/2505.09568)       |      8B      |      79.3       |      75.5      |
+|  8   |      [Infinity](https://arxiv.org/abs/2412.04431)       |      8B      |      77.0       |      72.7      |
+|  9   |       [SEED-X](https://arxiv.org/abs/2404.14396)        |      17B      |      74.8       |      71.5      |
+|  10  |    [Janus-Pro-7B](https://arxiv.org/abs/2501.17811)     |       7B     |      75.5       |      70.4      |
+|  11  |  [Janus-FocusDiff-1B](https://arxiv.org/abs/2506.05501) |      1B      |      71.0       |      68.1      |
+|  12  |        [Emu3](https://arxiv.org/abs/2409.18869)         |       8B     |      68.5       |      63.2      |
+|  13  |    [PixArt-alpha](https://arxiv.org/abs/2310.00426)     |      0.6B      |      67.5       |      62.7      |
+|  14  |    [Janus-Pro-1B](https://arxiv.org/abs/2501.17811)     |     1B       |      64.6       |      59.2      |
+|  15  |       [Show-o](https://arxiv.org/abs/2408.12528)        |     1.3B       |      63.6       |      59.1      |
+|  16  |       [VILA-U](https://arxiv.org/abs/2409.04429)        |      7B      |      62.9       |      58.0      |
+|  17  |     [Janus-Flow](https://arxiv.org/abs/2411.07975)      |     1.3B       |      55.5       |      49.0      |
+|  18  |     [VARGPTv1.1](https://arxiv.org/abs/2504.02949)      |      7B      |      53.6       |      48.3      |
+|  19  |      [LLamaGen](https://arxiv.org/abs/2406.06525)       |     775M       |      49.1       |      42.3      |
