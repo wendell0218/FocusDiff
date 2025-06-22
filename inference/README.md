@@ -1,6 +1,6 @@
 #### Text-to-Image Generation
 
-Our model is trained using [Janus-Pro](https://arxiv.org/abs/2501.17811) as the backbone. The inference code and the required Python environment are essentially inherited from the native inference code of [Janus-Pro](https://github.com/deepseek-ai/Janus). Below, a Simple Inference Example is provided. The file infer_janus.py provides the inference script for our Janus-FocusDiff on PairComp.
+Our model is trained using [Janus-Pro](https://arxiv.org/abs/2501.17811) as the backbone. The inference code and the required Python environment are essentially inherited from the native inference code of [Janus-Pro](https://github.com/deepseek-ai/Janus). Below, a Simple Inference Example is provided. Also, [infer_paircomp.py](infer_paircomp.py) provides the inference script for our Janus-FocusDiff on PairComp.
 
 ```python
 import os
