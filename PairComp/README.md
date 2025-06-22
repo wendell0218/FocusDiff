@@ -10,9 +10,8 @@ We record the probability of the model responding with ''yes'' (denoted as $P_{y
 $P_{no}$), with the semantic consistency score calculated as 
 $S(\mathcal{I}, \mathcal{T}) = P_{yes} / (P_{yes} + P_{no})$.
 For each prompt, we require a text-to-image model to generate two images. Therefore, for a pair of similar prompts $(\mathcal{T}^{1}_i,\mathcal{T}^{2}_i)$, we obtain four generated images $(\mathcal{I}^{1,1}_i,\mathcal{T}^{1,2}_i, \mathcal{I}^{2,1}_i, \mathcal{I}^{2,2}_i)$.
-We then compute the semantic consistency scores for each image with respect to its corresponding prompt: $s^{1,1}_i=S(\mathcal{I}^{1,1}_i, \mathcal{T}^{1}_i)$, $s^{1,2}_i=S(\mathcal{I}^{1,2}_i, \mathcal{T}^{1}_i)$, $s^{2,1}_i=S(\mathcal{I}^{2,1}_i, \mathcal{T}^{2}_i)$, $s^{2,2}_i=S(\mathcal{I}^{2,2}_i, \mathcal{T}^{2}_i)$.
-The arithmetic mean score is calculated as:
-$s_a = \frac{1}{4N} \sum_{i=1}^N( s_i^{1,1}+s_i^{1,2}+s_i^{2,1}+s_i^{2,2})$,
+We then compute the semantic consistency scores for each image with respect to its corresponding prompt: $s^{1,1}_i=S(\mathcal{I}^{1,1}_i, \mathcal{T}^{1}_i)$, $s^{1,2}_i=S(\mathcal{I}^{1,2}_i, \mathcal{T}^{1}_i)$, $s^{2,1}_i=S(\mathcal{I}^{2,1}_i, \mathcal{T}^{2}_i)$, $s^{2,2}_i=S(\mathcal{I}^{2,2}_i,\mathcal{T}^{2}_i)$.
+The arithmetic mean score is calculated as: $s_a = \frac{1}{4N} \sum_{i=1}^N( s_i^{1,1}+s_i^{1,2}+s_i^{2,1}+s_i^{2,2})$,
 and the geometric mean score is calculated as: $s_g = \frac{1}{N} \sqrt[4]{ s_i^{1,1}\cdot s_i^{1,2}\cdot s_i^{2,1}\cdot s_i^{2,2}} $.
 The score of the geometric (arithmetic) mean for ''Average'' is obtained by averaging the geometric (arithmetic) mean scores of the other six sub-tasks.
 
@@ -59,7 +58,7 @@ python summary_scores.py --tgtpath <JSON_PATH>
 
 to get the score across each subtask, and the average PairComp score.
 
-## LeaderBoarder
+### LeaderBoarder
 
 The following are some evaluation results on PairComp of SOTA text-to-image models. If you want to add your model's results on PairComp, feel free to contact us via email kaihangpan@zju.edu.cn.
 
