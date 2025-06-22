@@ -89,15 +89,26 @@ Below is the Leaderboard of Paircomp.:
 |  18  |     [VARGPTv1.1](https://arxiv.org/abs/2504.02949)      |      7B      |      53.6       |      48.3      |
 |  19  |      [LLamaGen](https://arxiv.org/abs/2406.06525)       |     775M       |      49.1       |      42.3      |
 
-
-## 🎨 Inference
-First please clone our repo and prepare the python environment. We recommend using Python>=3.10. 
+## 💪 Training
+First please clone our repo and prepare the python environment for inference. We recommend using Python>=3.10. 
 ```
 git clone https://github.com/wendell0218/FocusDiff.git
-cd FocusDiff
+cd FocusDiff/openr1-focusdiff
 
-conda create -n focus-diff python=3.11
-conda activate focus-diff
+conda create -n focus-diff-train python=3.11
+conda activate focus-diff-train
+pip install -r requirements.txt
+```
+
+
+## 🎨 Inference
+First please clone our repo and prepare the python environment for inference. We recommend using Python>=3.10. 
+```
+git clone https://github.com/wendell0218/FocusDiff.git
+cd FocusDiff/inference
+
+conda create -n focus-diff-eval python=3.11
+conda activate focus-diff-eval
 pip install -r requirements.txt
 ```
 
