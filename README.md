@@ -109,7 +109,32 @@ conda activate focusdiff
 pip install -r requirements.txt
 ```
 
-Then, in terms of file composition, [openr1-focusdiff/recipes](openr1-focusdiff/recipes) contains some configuration yml files for training, and [openr1-focusdiff/src](openr1-focusdiff/src) includes some training logic codes for PairComp. For specific details, please refer to [openr1-focusdiff/README.md](openr1-focusdiff/README.md).
+Then, in terms of file composition, [openr1-focusdiff/recipes](openr1-focusdiff/recipes) contains some configuration yml files for training, and [openr1-focusdiff/src](openr1-focusdiff/src) includes some training logic codes for PairComp. 
+You can perform RL for **Text-to-Image Generation** using the following command:
+
+```bash
+cd FocusDiff/openr1-focusdiff/src/open_r1
+
+export ACCELERATE_CONFIG=../../recipes/accelerate_configs/zero2.yaml
+export GRPO_CONFIG=../../recipes/t2i/grpo.yaml
+export NUM_PROCESSES=8
+
+# training command for Pair GRPO
+accelerate launch \
+  --config_file $ACCELERATE_CONFIG \
+  --num_processes $NUM_PROCESSES \
+  grpo_pair.py \
+  --config $GRPO_CONFIG
+# training command for vanilla GRPO
+accelerate launch \
+  --config_file $ACCELERATE_CONFIG \
+  --num_processes $NUM_PROCESSES \
+  grpo_vanilla.py \
+  --config $GRPO_CONFIG
+```
+
+For a more detailed introduction of training, please refer to [here](openr1-focusdiff/README.md).
+
 
 
 ## 🎨 Inference
