@@ -16,6 +16,9 @@
   <a href="https://huggingface.co/wendell0218/Janus-FocusDiff-7B">
     <img src="https://img.shields.io/badge/-%F0%9F%A4%97%20Checkpoint-orange?style=flat"/>
   </a>
+  <a href="https://huggingface.co/datasets/midbee/FocusDiff-Data-Subset">
+    <img src="https://img.shields.io/badge/-%F0%9F%A4%97%20Data-orange?style=flat"/>
+  </a>
 </p>
 
 <div align="center">
@@ -32,7 +35,7 @@ Hang Zhao<sup>2</sup>, Juncheng Li<sup>1&dagger;</sup>, Siliang Tang<sup>1</sup>
 ![alt text](assets/case.png)
 
 ## 🔥 News
-- **[June 21, 2025]** We have released [Janus-FocusDiff checkpoint](https://huggingface.co/wendell0218/Janus-FocusDiff-7B) and inference scripts. Try it out now!
+- **[June 21, 2025]** We have released [Janus-FocusDiff checkpoint](https://huggingface.co/wendell0218/Janus-FocusDiff-7B) and inference scripts. Besides, we also release a subset of [FocusDiff-Data](https://huggingface.co/datasets/midbee/FocusDiff-Data-Subset). Try it out now!
 - **[June 13, 2025]** We have released PairComp benchmark and leaderboard.
 - **[June 5, 2025]** Our paper is now available on arXiv: [FocusDiff: Advancing Fine-Grained Text-Image Alignment for Autoregressive Visual Generation through RL](https://arxiv.org/abs/2506.05501).
 
@@ -42,7 +45,7 @@ Hang Zhao<sup>2</sup>, Juncheng Li<sup>1&dagger;</sup>, Siliang Tang<sup>1</sup>
 - [x] Release PairComp Benchmark
 - [x] Release Janus-FocusDiff checkpoint
 - [x] Release training/inference scripts
-- [ ] Release training data
+- [x] Release training data
 
 ## 🚀 Overview
 
@@ -132,6 +135,9 @@ accelerate launch \
   grpo_vanilla.py \
   --config $GRPO_CONFIG
 ```
+
+A subset of FocusDiff-Data is released in [https://huggingface.co/datasets/midbee/FocusDiff-Data-Subset](https://huggingface.co/datasets/midbee/FocusDiff-Data-Subset).
+
 
 For a more detailed introduction of training, please refer to [here](openr1-focusdiff/README.md).
 
