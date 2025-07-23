@@ -22,13 +22,13 @@
 </p>
 
 <div align="center">
-Kaihang Pan<sup>1*</sup>, Wendong Bu<sup>1*</sup>, Yuruo Wu<sup>1*</sup>, Yang Wu<sup>2</sup>, Kai Shen<sup>1</sup>, Yunfei Li<sup>2</sup>,
+Kaihang Pan<sup>1*</sup>, Wendong Bu<sup>1*</sup>, Yuruo Wu<sup>1*</sup>, Yang Wu<sup>2</sup>, Kai Shen<sup>1&ddagger;</sup>, Yunfei Li<sup>2</sup>,
  
 Hang Zhao<sup>2</sup>, Juncheng Li<sup>1&dagger;</sup>, Siliang Tang<sup>1</sup>, Yueting Zhuang<sup>1</sup>
 
 <sup>1</sup>Zhejiang University, <sup>2</sup>Ant Group
 
-\*Equal Contribution, <sup>&dagger;</sup>Corresponding Authors
+\*Equal Contribution, <sup>&ddagger;</sup>Project Leader, <sup>&dagger;</sup>Corresponding Authors
 
 </div>
 
